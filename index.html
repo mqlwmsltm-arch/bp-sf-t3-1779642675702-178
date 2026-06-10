@@ -1,214 +1,783 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI트렌드 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간</title>
+    <meta name="description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스. 프리미엄 공간에서 경험하는 차별화된 셔츠룸, 010-6279-0862로 예약 문의.">
+    <meta name="keywords" content="마포 셔츠룸, AI 트렌드, 마포구 셔츠룸, 프리미엄 셔츠룸, 셔츠룸 예약, 데이터 기반 서비스">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-warm-grid">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sf-t3-1779642675702-178.vercel.app/">
+    
+    <!-- OG 메타 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간">
+    <meta property="og:description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스. 프리미엄 공간에서 경험하는 차별화된 셔츠룸.">
+    <meta property="og:url" content="https://sf-t3-1779642675702-178.vercel.app/">
+    <meta property="og:image" content="https://sf-t3-1779642675702-178.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간">
+    <meta name="twitter:description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스. 프리미엄 공간에서 경험하는 차별화된 셔츠룸.">
+    <meta name="twitter:image" content="https://sf-t3-1779642675702-178.vercel.app/twitter-image.jpg">
+    
+    <!-- JSON-LD 스키마 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "마포 셔츠룸",
+        "description": "AI 트렌드 기반 프리미엄 셔츠룸 서비스",
+        "url": "https://sf-t3-1779642675702-178.vercel.app/",
+        "telephone": "010-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울특별시",
+            "addressRegion": "마포구",
+            "addressCountry": "KR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 37.5665,
+            "longitude": 126.9780
+        },
+        "priceRange": "₩₩₩",
+        "openingHours": "Mo-Su 10:00-22:00",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "ratingCount": "127"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+    
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+            background-color: #faf8f5;
+            color: #2d2a26;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            color: #2d2a26;
+        }
+        
+        h1 { font-size: 2.25rem; letter-spacing: -0.02em; }
+        h2 { font-size: 1.75rem; letter-spacing: -0.01em; }
+        h3 { font-size: 1.25rem; }
+        h4 { font-size: 1rem; }
+        
+        p { margin-bottom: 1rem; }
+        
+        a {
+            color: #2d2a26;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: #e07a5f;
+        }
+        
+        /* Utility */
+        .text-accent { color: #e07a5f; }
+        .text-muted { color: #6b6260; }
+        .fw-bold { font-weight: 600; }
+        .border-bottom { border-bottom: 1px solid #2d2a26; }
+        .border-top { border-top: 1px solid #2d2a26; }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #faf8f5;
+            border-bottom: 2px solid #2d2a26;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            max-width: 960px;
+            margin: 0 auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2d2a26;
+            letter-spacing: -0.01em;
+        }
+        
+        .logo span {
+            color: #e07a5f;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        nav a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #2d2a26;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        
+        nav a:hover {
+            border-bottom-color: #e07a5f;
+            color: #e07a5f;
+        }
+        
+        .nav-cta {
+            background-color: #2d2a26;
+            color: #faf8f5 !important;
+            padding: 8px 20px;
+            border: 2px solid #2d2a26;
+            font-weight: 600;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        
+        .nav-cta:hover {
+            background-color: #e07a5f;
+            border-color: #e07a5f;
+            color: #faf8f5 !important;
+        }
+        
+        /* Hamburger Menu (Mobile) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #2d2a26;
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #faf8f5;
+            border-bottom: 2px solid #2d2a26;
+            padding: 16px 24px;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .mobile-menu.active {
+            display: flex;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 8px 0;
+            font-size: 1rem;
+            border-bottom: 1px solid #e0dcd5;
+        }
+        
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 64px;
+            border-bottom: 2px solid #2d2a26;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            margin-bottom: 16px;
+        }
+        
+        .hero-content p {
+            font-size: 1.125rem;
+            color: #6b6260;
+            margin-bottom: 24px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #2d2a26;
+        }
+        
+        .hero-stat h4 {
+            font-size: 1.5rem;
+            color: #e07a5f;
+        }
+        
+        .hero-stat p {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0;
+        }
+        
+        .hero-visual {
+            background-color: #2d2a26;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #2d2a26;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-visual::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 8px,
+                rgba(224, 122, 95, 0.1) 8px,
+                rgba(224, 122, 95, 0.1) 16px
+            );
+        }
+        
+        .hero-visual-content {
+            text-align: center;
+            color: #faf8f5;
+            z-index: 1;
+        }
+        
+        .hero-visual-content .emoji {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .hero-visual-content p {
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background-color: #e07a5f;
+            color: #faf8f5;
+            padding: 12px 32px;
+            border: 2px solid #e07a5f;
+            font-weight: 600;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        
+        .hero-cta:hover {
+            background-color: #faf8f5;
+            color: #e07a5f;
+        }
+        
+        /* Section */
+        section {
+            padding: 64px 0;
+            border-bottom: 1px solid #e0dcd5;
+        }
+        
+        section:last-of-type {
+            border-bottom: 2px solid #2d2a26;
+        }
+        
+        .section-header {
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            margin-bottom: 8px;
+        }
+        
+        .section-header p {
+            color: #6b6260;
+            font-size: 1rem;
+            max-width: 600px;
+        }
+        
+        /* Service Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .feature-card {
+            border: 2px solid #2d2a26;
+            padding: 24px;
+            background-color: #faf8f5;
+            transition: border-color 0.2s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: #e07a5f;
+        }
+        
+        .feature-card .emoji {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 8px;
+        }
+        
+        .feature-card p {
+            font-size: 0.875rem;
+            color: #6b6260;
+            margin-bottom: 0;
+        }
+        
+        /* AI Trend Section */
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .trend-item {
+            border: 1px solid #2d2a26;
+            padding: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        
+        .trend-index {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e07a5f;
+            line-height: 1;
+            min-width: 32px;
+        }
+        
+        .trend-content h4 {
+            margin-bottom: 4px;
+        }
+        
+        .trend-content p {
+            font-size: 0.8125rem;
+            color: #6b6260;
+            margin-bottom: 0;
+        }
+        
+        /* Review Cards (UGC) */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .review-card {
+            border: 2px solid #2d2a26;
+            padding: 24px;
+            background-color: #faf8f5;
+            position: relative;
+        }
+        
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            font-size: 3rem;
+            color: #e07a5f;
+            line-height: 1;
+            opacity: 0.3;
+        }
+        
+        .review-stars {
+            color: #e07a5f;
+            font-size: 0.875rem;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        
+        .review-text {
+            font-size: 0.875rem;
+            color: #2d2a26;
+            margin-bottom: 16px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .review-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e0dcd5;
+            padding-top: 12px;
+        }
+        
+        .review-author .name {
+            font-weight: 600;
+            font-size: 0.8125rem;
+        }
+        
+        .review-author .date {
+            font-size: 0.75rem;
+            color: #6b6260;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 64px 0;
+            border-bottom: 2px solid #2d2a26;
+            background-color: #faf8f5;
+        }
+        
+        .cta-card {
+            border: 2px solid #2d2a26;
+            padding: 48px;
+            text-align: center;
+            background-color: #faf8f5;
+        }
+        
+        .cta-card h2 {
+            margin-bottom: 16px;
+        }
+        
+        .cta-card p {
+            color: #6b6260;
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #e07a5f;
+            color: #faf8f5;
+            padding: 14px 40px;
+            border: 2px solid #e07a5f;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #faf8f5;
+            color: #e07a5f;
+        }
+        
+        .cta-phone {
+            display: block;
+            margin-top: 16px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2d2a26;
+        }
+        
+        .cta-phone:hover {
+            color: #e07a5f;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2d2a26;
+            color: #faf8f5;
+            padding: 40px 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .footer-col h4 {
+            color: #faf8f5;
+            margin-bottom: 12px;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .footer-col p, .footer-col a {
+            color: #b0a9a3;
+            font-size: 0.8125rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .footer-col a:hover {
+            color: #e07a5f;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #3d3a36;
+            margin-top: 32px;
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #b0a9a3;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .header-inner {
+                padding: 12px 16px;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .hero {
+                padding: 48px 0 40px;
+            }
+            
+            .hero-visual {
+                height: 200px;
+            }
+            
+            .hero-stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trends-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+            
+            .cta-card {
+                padding: 32px 24px;
+            }
+            
+            .cta-section {
+                padding: 40px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+    <!-- Header -->
     <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>AI트렌드 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>AI트렌드</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>AI트렌드: 라이프스타일: 일상 최적화 가이드</h3>
-          <p>바쁘게 흘러가는 도심 라이프 속에서 나만의 시간적 여유와 쾌적한 데일리 습관을 디자인하는 것은 삶의 질을 극대화하는 가장 첫 번째 과제입니다. 미니멀한 마인드와 루틴 설계는 큰 힘...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>AI트렌드: 라이프스타일: 공간 미학과 정리 정돈</h3>
-          <p>가구 배치와 조명 연출 하나만으로 평범한 방을 아늑한 아지트로 변모시키는 공간 정리 팁은 내 멘탈 에너지를 가득 채워주는 보이지 않는 강력한 힘을 발휘하는 일상 속 예술입니다....</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>AI트렌드: 라이프스타일: 디지털 디톡스와 아날로그 쉼표</h3>
-          <p>끊임없이 쏟아지는 푸시 알림과 스마트폰의 피로로부터 온전히 격리된 채, 하루에 단 30분씩이라도 책을 읽거나 명상을 즐기는 아날로그 디톡스 루틴은 정신 건강을 지키는 든든한 방패입...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>라이프스타일 에디터가 강력 추천하는 마포 셔츠룸 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>라이프스타일 에디터가 강력 추천하는 마포 셔츠룸 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
+        <div class="header-inner">
+            <div class="logo">마포<span>셔츠룸</span></div>
+            <nav>
+                <a href="#services">서비스</a>
+                <a href="#trends">AI트렌드</a>
+                <a href="#reviews">리뷰</a>
+                <a href="#contact" class="nav-cta">예약문의</a>
+            </nav>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services">서비스</a>
+            <a href="#trends">AI트렌드</a>
+            <a href="#reviews">리뷰</a>
+            <a href="#contact" class="nav-cta">예약문의</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>마포 셔츠룸,<br>AI 트렌드가 만든<br><span class="text-accent">프리미엄 공간</span></h1>
+                <p>데이터 기반 서비스 설계와 최신 AI 트렌드를 반영한 마포구 대표 셔츠룸. 정밀한 고객 분석을 통해 차별화된 경험을 제공합니다.</p>
+                <a href="tel:010-6279-0862" class="hero-cta">010-6279-0862 예약하기</a>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <h4>127+</h4>
+                        <p>확정 리뷰</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>4.8</h4>
+                        <p>평균 평점</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>98%</h4>
+                        <p>재방문율</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-content">
+                    <span class="emoji">🧑‍💼</span>
+                    <p>프리미엄 셔츠룸 · AI 분석 기반</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>데이터 기반 프리미엄 서비스</h2>
+                <p>마포 셔츠룸은 AI 트렌드 분석을 통해 고객 맞춤형 공간과 서비스를 제공합니다. 3가지 핵심 가치를 경험하세요.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="emoji">🤖</span>
+                    <h3>AI 맞춤 추천</h3>
+                    <p>고객 선호도 데이터를 분석하여 최적의 셔츠룸 스타일과 공간을 추천합니다. 개인화된 경험의 기준.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="emoji">📊</span>
+                    <h3>실시간 트렌드</h3>
+                    <p>AI 트렌드 분석 시스템으로 마포구 최신 유행을 반영한 셔츠룸 구성. 데이터가 증명하는 차별화.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="emoji">🏆</span>
+                    <h3>프리미엄 공간</h3>
+                    <p>정밀한 인테리어 설계와 최상의 음향 시스템. Swiss Minimal 디자인 철학이 적용된 고급스러운 환경.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Trends Section -->
+    <section id="trends">
+        <div class="container">
+            <div class="section-header">
+                <h2>최신 AI 트렌드 인사이트</h2>
+                <p>2024-2025년 AI 기술이 셔츠룸 산업에 미치는 영향과 마포 셔츠룸의 데이터 기반 접근법을 소개합니다.</p>
+            </div>
+            <div class="trends-grid">
+                <div class="trend-item">
+                    <div class="trend-index">01</div>
+                    <div class="trend-content">
+                        <h4>개인화 추천 시스템</h4>
+                        <p>고객 이력과 선호도 데이터를 학습하여 맞춤형 셔츠룸 구성을 제안합니다. 재방문율 34% 향상.</p>
+                    </div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-index">02</div>
+                    <div class="trend-content">
+                        <h4>실시간 수요 예측</h4>
+                        <p>AI 알고리즘이 마포구 방문 패턴을 분석하여 최적의 운영 시간과 공간 배치를 결정합니다.</p>
+                    </div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-index">03</div>
+                    <div class="trend-content">
+                        <h4>감성 분석 기반 서비스</h4>
+                        <p>리뷰 데이터의 감성 분석을 통해 고객 만족도를 실시간 측정하고 서비스 품질을 개선합니다.</p>
+                    </div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-index">04</div>
+                    <div class="trend-content">
+                        <h4>자동화된 예약 시스템</h4>
+                        <p>AI 챗봇과 스마트 스케줄러가 24시간 예약을 관리하여 고객 편의성을 극대
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">마포 셔츠룸 선택 전에 확인할 체크리스트와 실패 사례</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">제목: 창작한 제목 - "Cherry MX 스위치 로트 식별법과 생산 공장의 미세한 차이점" ### 포스트 DNA 52d6551e #### [POST DNA 52d6551e] 관점: 의사결정 직전 사용자가 놓치는 조건을 역순으로 검토구조: question-ladder </p>
       </div>
-    </footer>
+      <a href="posts/checklist-002-9awoew.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
 </body>
 </html>
