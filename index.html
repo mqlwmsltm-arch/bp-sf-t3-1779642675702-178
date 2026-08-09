@@ -1,753 +1,723 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간</title>
-    <meta name="description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스. 프리미엄 공간에서 경험하는 차별화된 셔츠룸, 010-6279-0862로 예약 문의.">
-    <meta name="keywords" content="마포 셔츠룸, AI 트렌드, 마포구 셔츠룸, 프리미엄 셔츠룸, 셔츠룸 예약, 데이터 기반 서비스">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-warm-grid">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://sf-t3-1779642675702-178.maphoshirts.xyz/">
-    
-    <!-- OG 메타 -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간">
-    <meta property="og:description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스. 프리미엄 공간에서 경험하는 차별화된 셔츠룸, 010-6279-0862로 예약 문의.">
-    <meta property="og:url" content="https://sf-t3-1779642675702-178.maphoshirts.xyz/">
-    <meta property="og:image" content="https://sf-t3-1779642675702-178.vercel.app/og-image.jpg">
-    <meta property="og:locale" content="ko_KR">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간">
-    <meta name="twitter:description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스. 프리미엄 공간에서 경험하는 차별화된 셔츠룸.">
-    <meta name="twitter:image" content="https://sf-t3-1779642675702-178.vercel.app/twitter-image.jpg">
-    
-    <!-- JSON-LD 스키마 -->
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "마포 셔츠룸",
-  "description": "AI 트렌드 기반 프리미엄 셔츠룸 서비스",
-  "url": "https://sf-t3-1779642675702-178.maphoshirts.xyz/",
-  "telephone": "010-6279-0862",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "서울특별시",
-    "addressRegion": "마포구",
-    "addressCountry": "KR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 37.5665,
-    "longitude": 126.978
-  },
-  "priceRange": "₩₩₩",
-  "openingHours": "Mo-Su 10:00-22:00",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "bestRating": "5",
-    "ratingCount": "127"
-  }
-}</script>
-    
-    <style>
-        /* Reset & Base */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
-            background-color: #faf8f5;
-            color: #2d2a26;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600;
-            line-height: 1.2;
-            color: #2d2a26;
-        }
-        
-        h1 { font-size: 2.25rem; letter-spacing: -0.02em; }
-        h2 { font-size: 1.75rem; letter-spacing: -0.01em; }
-        h3 { font-size: 1.25rem; }
-        h4 { font-size: 1rem; }
-        
-        p { margin-bottom: 1rem; }
-        
-        a {
-            color: #2d2a26;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        a:hover {
-            color: #e07a5f;
-        }
-        
-        /* Utility */
-        .text-accent { color: #e07a5f; }
-        .text-muted { color: #6b6260; }
-        .fw-bold { font-weight: 600; }
-        .border-bottom { border-bottom: 1px solid #2d2a26; }
-        .border-top { border-top: 1px solid #2d2a26; }
-        
-        /* Header & Navigation */
-        header {
-            background-color: #faf8f5;
-            border-bottom: 2px solid #2d2a26;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 0;
-            max-width: 960px;
-            margin: 0 auto;
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-        
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #2d2a26;
-            letter-spacing: -0.01em;
-        }
-        
-        .logo span {
-            color: #e07a5f;
-        }
-        
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-        
-        nav a {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #2d2a26;
-            padding: 4px 0;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.2s ease, color 0.2s ease;
-        }
-        
-        nav a:hover {
-            border-bottom-color: #e07a5f;
-            color: #e07a5f;
-        }
-        
-        .nav-cta {
-            background-color: #2d2a26;
-            color: #faf8f5 !important;
-            padding: 8px 20px;
-            border: 2px solid #2d2a26;
-            font-weight: 600;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-        
-        .nav-cta:hover {
-            background-color: #e07a5f;
-            border-color: #e07a5f;
-            color: #faf8f5 !important;
-        }
-        
-        /* Hamburger Menu (Mobile) */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 4px;
-        }
-        
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background-color: #2d2a26;
-            transition: transform 0.3s ease;
-        }
-        
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: #faf8f5;
-            border-bottom: 2px solid #2d2a26;
-            padding: 16px 24px;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .mobile-menu.active {
-            display: flex;
-        }
-        
-        .mobile-menu a {
-            display: block;
-            padding: 8px 0;
-            font-size: 1rem;
-            border-bottom: 1px solid #e0dcd5;
-        }
-        
-        .mobile-menu a:last-child {
-            border-bottom: none;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 80px 0 64px;
-            border-bottom: 2px solid #2d2a26;
-        }
-        
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-        }
-        
-        .hero-content h1 {
-            margin-bottom: 16px;
-        }
-        
-        .hero-content p {
-            font-size: 1.125rem;
-            color: #6b6260;
-            margin-bottom: 24px;
-        }
-        
-        .hero-stats {
-            display: flex;
-            gap: 32px;
-            margin-top: 32px;
-            padding-top: 24px;
-            border-top: 1px solid #2d2a26;
-        }
-        
-        .hero-stat h4 {
-            font-size: 1.5rem;
-            color: #e07a5f;
-        }
-        
-        .hero-stat p {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0;
-        }
-        
-        .hero-visual {
-            background-color: #2d2a26;
-            height: 320px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #2d2a26;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-visual::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 8px,
-                rgba(224, 122, 95, 0.1) 8px,
-                rgba(224, 122, 95, 0.1) 16px
-            );
-        }
-        
-        .hero-visual-content {
-            text-align: center;
-            color: #faf8f5;
-            z-index: 1;
-        }
-        
-        .hero-visual-content .emoji {
-            font-size: 4rem;
-            display: block;
-            margin-bottom: 8px;
-        }
-        
-        .hero-visual-content p {
-            font-size: 0.875rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 0;
-        }
-        
-        .hero-cta {
-            display: inline-block;
-            background-color: #e07a5f;
-            color: #faf8f5;
-            padding: 12px 32px;
-            border: 2px solid #e07a5f;
-            font-weight: 600;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-        
-        .hero-cta:hover {
-            background-color: #faf8f5;
-            color: #e07a5f;
-        }
-        
-        /* Section */
-        section {
-            padding: 64px 0;
-            border-bottom: 1px solid #e0dcd5;
-        }
-        
-        section:last-of-type {
-            border-bottom: 2px solid #2d2a26;
-        }
-        
-        .section-header {
-            margin-bottom: 40px;
-        }
-        
-        .section-header h2 {
-            margin-bottom: 8px;
-        }
-        
-        .section-header p {
-            color: #6b6260;
-            font-size: 1rem;
-            max-width: 600px;
-        }
-        
-        /* Service Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-        
-        .feature-card {
-            border: 2px solid #2d2a26;
-            padding: 24px;
-            background-color: #faf8f5;
-            transition: border-color 0.2s ease;
-        }
-        
-        .feature-card:hover {
-            border-color: #e07a5f;
-        }
-        
-        .feature-card .emoji {
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 12px;
-        }
-        
-        .feature-card h3 {
-            margin-bottom: 8px;
-        }
-        
-        .feature-card p {
-            font-size: 0.875rem;
-            color: #6b6260;
-            margin-bottom: 0;
-        }
-        
-        /* AI Trend Section */
-        .trends-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
-        
-        .trend-item {
-            border: 1px solid #2d2a26;
-            padding: 20px;
-            display: flex;
-            gap: 16px;
-            align-items: flex-start;
-        }
-        
-        .trend-index {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #e07a5f;
-            line-height: 1;
-            min-width: 32px;
-        }
-        
-        .trend-content h4 {
-            margin-bottom: 4px;
-        }
-        
-        .trend-content p {
-            font-size: 0.8125rem;
-            color: #6b6260;
-            margin-bottom: 0;
-        }
-        
-        /* Review Cards (UGC) */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-        
-        .review-card {
-            border: 2px solid #2d2a26;
-            padding: 24px;
-            background-color: #faf8f5;
-            position: relative;
-        }
-        
-        .review-card::before {
-            content: '"';
-            position: absolute;
-            top: 8px;
-            left: 12px;
-            font-size: 3rem;
-            color: #e07a5f;
-            line-height: 1;
-            opacity: 0.3;
-        }
-        
-        .review-stars {
-            color: #e07a5f;
-            font-size: 0.875rem;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-        }
-        
-        .review-text {
-            font-size: 0.875rem;
-            color: #2d2a26;
-            margin-bottom: 16px;
-            font-style: italic;
-            line-height: 1.5;
-        }
-        
-        .review-author {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #e0dcd5;
-            padding-top: 12px;
-        }
-        
-        .review-author .name {
-            font-weight: 600;
-            font-size: 0.8125rem;
-        }
-        
-        .review-author .date {
-            font-size: 0.75rem;
-            color: #6b6260;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 64px 0;
-            border-bottom: 2px solid #2d2a26;
-            background-color: #faf8f5;
-        }
-        
-        .cta-card {
-            border: 2px solid #2d2a26;
-            padding: 48px;
-            text-align: center;
-            background-color: #faf8f5;
-        }
-        
-        .cta-card h2 {
-            margin-bottom: 16px;
-        }
-        
-        .cta-card p {
-            color: #6b6260;
-            margin-bottom: 24px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #e07a5f;
-            color: #faf8f5;
-            padding: 14px 40px;
-            border: 2px solid #e07a5f;
-            font-weight: 600;
-            font-size: 1.125rem;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-        
-        .cta-button:hover {
-            background-color: #faf8f5;
-            color: #e07a5f;
-        }
-        
-        .cta-phone {
-            display: block;
-            margin-top: 16px;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #2d2a26;
-        }
-        
-        .cta-phone:hover {
-            color: #e07a5f;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #2d2a26;
-            color: #faf8f5;
-            padding: 40px 0;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        
-        .footer-col h4 {
-            color: #faf8f5;
-            margin-bottom: 12px;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        
-        .footer-col p, .footer-col a {
-            color: #b0a9a3;
-            font-size: 0.8125rem;
-            display: block;
-            margin-bottom: 4px;
-        }
-        
-        .footer-col a:hover {
-            color: #e07a5f;
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid #3d3a36;
-            margin-top: 32px;
-            padding-top: 24px;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #b0a9a3;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 16px;
-            }
-            
-            .header-inner {
-                padding: 12px 16px;
-            }
-            
-            nav {
-                display: none;
-            }
-            
-            .hamburger {
-                display: flex;
-            }
-            
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            
-            .hero {
-                padding: 48px 0 40px;
-            }
-            
-            .hero-visual {
-                height: 200px;
-            }
-            
-            .hero-stats {
-                gap: 24px;
-                flex-wrap: wrap;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .trends-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-            
-            section {
-                padding: 40px 0;
-            }
-            
-            .cta-card {
-                padding: 32px 24px;
-            }
-            
-            .cta-section {
-                padding: 40px 0;
-            }
-        }
-    </style>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간</title>
+ <meta name="description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스.">
+ <meta name="keywords" content="마포 셔츠룸, AI 트렌드, 마포구 셔츠룸, 프리미엄 셔츠룸, 셔츠룸 예약, 데이터 기반 서비스">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://sf-t3-1779642675702-178.maphoshirts.xyz/">
+ 
+ <!-- OG 메타 -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간">
+ <meta property="og:description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스.">
+ <meta property="og:url" content="https://sf-t3-1779642675702-178.maphoshirts.xyz/">
+ <meta property="og:image" content="https://sf-t3-1779642675702-178.vercel.app/og-image.jpg">
+ <meta property="og:locale" content="ko_KR">
+ 
+ <!-- Twitter Card -->
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="마포 셔츠룸 | AI 트렌드 기반 프리미엄 공간">
+ <meta name="twitter:description" content="마포 셔츠룸의 최신 AI 트렌드와 데이터 기반 서비스. 프리미엄 공간에서 경험하는 차별화된 셔츠룸.">
+ <meta name="twitter:image" content="https://sf-t3-1779642675702-178.vercel.app/twitter-image.jpg">
+ 
+ <!-- JSON-LD 스키마 -->
+ <script type="application/ld+json">{ "@context": "https://schema.org", "@type": "LocalBusiness", "name": "마포 셔츠룸", "description": "AI 트렌드 기반 프리미엄 셔츠룸 서비스", "url": "https://sf-t3-1779642675702-178.maphoshirts.xyz/", "address": { "@type": "PostalAddress", "addressLocality": "서울특별시", "addressRegion": "마포구", "addressCountry": "KR" }, "geo": { "@type": "GeoCoordinates", "latitude": 37.5665, "longitude": 126.978 }, "priceRange": "₩₩₩", "openingHours": "Mo-Su 10:00-22:00", "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "bestRating": "5", "ratingCount": "127" } }</script>
+ 
+ <style>
+ /* Reset & Base */
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ 
+ html {
+ font-size: 16px;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ body {
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+ background-color: #faf8f5;
+ color: #2d2a26;
+ line-height: 1.6;
+ min-height: 100vh;
+ }
+ 
+ /* Container */
+ .container {
+ max-width: 960px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ 
+ /* Typography */
+ h1, h2, h3, h4, h5, h6 {
+ font-weight: 600;
+ line-height: 1.2;
+ color: #2d2a26;
+ }
+ 
+ h1 { font-size: 2.25rem; letter-spacing: -0.02em; }
+ h2 { font-size: 1.75rem; letter-spacing: -0.01em; }
+ h3 { font-size: 1.25rem; }
+ h4 { font-size: 1rem; }
+ 
+ p { margin-bottom: 1rem; }
+ 
+ a {
+ color: #2d2a26;
+ text-decoration: none;
+ transition: color 0.2s ease;
+ }
+ 
+ a:hover {
+ color: #e07a5f;
+ }
+ 
+ /* Utility */
+ .text-accent { color: #e07a5f; }
+ .text-muted { color: #6b6260; }
+ .fw-bold { font-weight: 600; }
+ .border-bottom { border-bottom: 1px solid #2d2a26; }
+ .border-top { border-top: 1px solid #2d2a26; }
+ 
+ /* Header & Navigation */
+ header {
+ background-color: #faf8f5;
+ border-bottom: 2px solid #2d2a26;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ }
+ 
+ .header-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 16px 0;
+ max-width: 960px;
+ margin: 0 auto;
+ padding-left: 24px;
+ padding-right: 24px;
+ }
+ 
+ .logo {
+ font-size: 1.25rem;
+ font-weight: 700;
+ color: #2d2a26;
+ letter-spacing: -0.01em;
+ }
+ 
+ .logo span {
+ color: #e07a5f;
+ }
+ 
+ nav {
+ display: flex;
+ align-items: center;
+ gap: 24px;
+ }
+ 
+ nav a {
+ font-size: 0.875rem;
+ font-weight: 500;
+ color: #2d2a26;
+ padding: 4px 0;
+ border-bottom: 2px solid transparent;
+ transition: border-color 0.2s ease, color 0.2s ease;
+ }
+ 
+ nav a:hover {
+ border-bottom-color: #e07a5f;
+ color: #e07a5f;
+ }
+ 
+ .nav-cta {
+ background-color: #2d2a26;
+ color: #faf8f5 !important;
+ padding: 8px 20px;
+ border: 2px solid #2d2a26;
+ font-weight: 600;
+ transition: background-color 0.2s ease, color 0.2s ease;
+ }
+ 
+ .nav-cta:hover {
+ background-color: #e07a5f;
+ border-color: #e07a5f;
+ color: #faf8f5 !important;
+ }
+ 
+ /* Hamburger Menu (Mobile) */
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 4px;
+ }
+ 
+ .hamburger span {
+ display: block;
+ width: 24px;
+ height: 2px;
+ background-color: #2d2a26;
+ transition: transform 0.3s ease;
+ }
+ 
+ .mobile-menu {
+ display: none;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ right: 0;
+ background-color: #faf8f5;
+ border-bottom: 2px solid #2d2a26;
+ padding: 16px 24px;
+ flex-direction: column;
+ gap: 12px;
+ }
+ 
+ .mobile-menu.active {
+ display: flex;
+ }
+ 
+ .mobile-menu a {
+ display: block;
+ padding: 8px 0;
+ font-size: 1rem;
+ border-bottom: 1px solid #e0dcd5;
+ }
+ 
+ .mobile-menu a:last-child {
+ border-bottom: none;
+ }
+ 
+ /* Hero Section */
+ .hero {
+ padding: 80px 0 64px;
+ border-bottom: 2px solid #2d2a26;
+ }
+ 
+ .hero-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 48px;
+ align-items: center;
+ }
+ 
+ .hero-content h1 {
+ margin-bottom: 16px;
+ }
+ 
+ .hero-content p {
+ font-size: 1.125rem;
+ color: #6b6260;
+ margin-bottom: 24px;
+ }
+ 
+ .hero-stats {
+ display: flex;
+ gap: 32px;
+ margin-top: 32px;
+ padding-top: 24px;
+ border-top: 1px solid #2d2a26;
+ }
+ 
+ .hero-stat h4 {
+ font-size: 1.5rem;
+ color: #e07a5f;
+ }
+ 
+ .hero-stat p {
+ font-size: 0.75rem;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ margin-bottom: 0;
+ }
+ 
+ .hero-visual {
+ background-color: #2d2a26;
+ height: 320px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 2px solid #2d2a26;
+ position: relative;
+ overflow: hidden;
+ }
+ 
+ .hero-visual::after {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: repeating-linear-gradient(
+ 45deg,
+ transparent,
+ transparent 8px,
+ rgba(224, 122, 95, 0.1) 8px,
+ rgba(224, 122, 95, 0.1) 16px
+ );
+ }
+ 
+ .hero-visual-content {
+ text-align: center;
+ color: #faf8f5;
+ z-index: 1;
+ }
+ 
+ .hero-visual-content .emoji {
+ font-size: 4rem;
+ display: block;
+ margin-bottom: 8px;
+ }
+ 
+ .hero-visual-content p {
+ font-size: 0.875rem;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ margin-bottom: 0;
+ }
+ 
+ .hero-cta {
+ display: inline-block;
+ background-color: #e07a5f;
+ color: #faf8f5;
+ padding: 12px 32px;
+ border: 2px solid #e07a5f;
+ font-weight: 600;
+ transition: background-color 0.2s ease, color 0.2s ease;
+ }
+ 
+ .hero-cta:hover {
+ background-color: #faf8f5;
+ color: #e07a5f;
+ }
+ 
+ /* Section */
+ section {
+ padding: 64px 0;
+ border-bottom: 1px solid #e0dcd5;
+ }
+ 
+ section:last-of-type {
+ border-bottom: 2px solid #2d2a26;
+ }
+ 
+ .section-header {
+ margin-bottom: 40px;
+ }
+ 
+ .section-header h2 {
+ margin-bottom: 8px;
+ }
+ 
+ .section-header p {
+ color: #6b6260;
+ font-size: 1rem;
+ max-width: 600px;
+ }
+ 
+ /* Service Features Grid */
+ .features-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 16px;
+ }
+ 
+ .feature-card {
+ border: 2px solid #2d2a26;
+ padding: 24px;
+ background-color: #faf8f5;
+ transition: border-color 0.2s ease;
+ }
+ 
+ .feature-card:hover {
+ border-color: #e07a5f;
+ }
+ 
+ .feature-card .emoji {
+ font-size: 2rem;
+ display: block;
+ margin-bottom: 12px;
+ }
+ 
+ .feature-card h3 {
+ margin-bottom: 8px;
+ }
+ 
+ .feature-card p {
+ font-size: 0.875rem;
+ color: #6b6260;
+ margin-bottom: 0;
+ }
+ 
+ /* AI Trend Section */
+ .trends-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 16px;
+ }
+ 
+ .trend-item {
+ border: 1px solid #2d2a26;
+ padding: 20px;
+ display: flex;
+ gap: 16px;
+ align-items: flex-start;
+ }
+ 
+ .trend-index {
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: #e07a5f;
+ line-height: 1;
+ min-width: 32px;
+ }
+ 
+ .trend-content h4 {
+ margin-bottom: 4px;
+ }
+ 
+ .trend-content p {
+ font-size: 0.8125rem;
+ color: #6b6260;
+ margin-bottom: 0;
+ }
+ 
+ /* Review Cards (UGC) */
+ .reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 16px;
+ }
+ 
+ .review-card {
+ border: 2px solid #2d2a26;
+ padding: 24px;
+ background-color: #faf8f5;
+ position: relative;
+ }
+ 
+ .review-card::before {
+ content: '"';
+ position: absolute;
+ top: 8px;
+ left: 12px;
+ font-size: 3rem;
+ color: #e07a5f;
+ line-height: 1;
+ opacity: 0.3;
+ }
+ 
+ .review-stars {
+ color: #e07a5f;
+ font-size: 0.875rem;
+ letter-spacing: 2px;
+ margin-bottom: 12px;
+ }
+ 
+ .review-text {
+ font-size: 0.875rem;
+ color: #2d2a26;
+ margin-bottom: 16px;
+ font-style: italic;
+ line-height: 1.5;
+ }
+ 
+ .review-author {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-top: 1px solid #e0dcd5;
+ padding-top: 12px;
+ }
+ 
+ .review-author .name {
+ font-weight: 600;
+ font-size: 0.8125rem;
+ }
+ 
+ .review-author .date {
+ font-size: 0.75rem;
+ color: #6b6260;
+ }
+ 
+ /* CTA Section */
+ .cta-section {
+ padding: 64px 0;
+ border-bottom: 2px solid #2d2a26;
+ background-color: #faf8f5;
+ }
+ 
+ .cta-card {
+ border: 2px solid #2d2a26;
+ padding: 48px;
+ text-align: center;
+ background-color: #faf8f5;
+ }
+ 
+ .cta-card h2 {
+ margin-bottom: 16px;
+ }
+ 
+ .cta-card p {
+ color: #6b6260;
+ margin-bottom: 24px;
+ max-width: 500px;
+ margin-left: auto;
+ margin-right: auto;
+ }
+ 
+ .cta-button {
+ display: inline-block;
+ background-color: #e07a5f;
+ color: #faf8f5;
+ padding: 14px 40px;
+ border: 2px solid #e07a5f;
+ font-weight: 600;
+ font-size: 1.125rem;
+ transition: background-color 0.2s ease, color 0.2s ease;
+ }
+ 
+ .cta-button:hover {
+ background-color: #faf8f5;
+ color: #e07a5f;
+ }
+ 
+ .cta-phone {
+ display: block;
+ margin-top: 16px;
+ font-size: 1.25rem;
+ font-weight: 700;
+ color: #2d2a26;
+ }
+ 
+ .cta-phone:hover {
+ color: #e07a5f;
+ }
+ 
+ /* Footer */
+ footer {
+ background-color: #2d2a26;
+ color: #faf8f5;
+ padding: 40px 0;
+ }
+ 
+ .footer-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 24px;
+ }
+ 
+ .footer-col h4 {
+ color: #faf8f5;
+ margin-bottom: 12px;
+ font-size: 0.875rem;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ }
+ 
+ .footer-col p, .footer-col a {
+ color: #b0a9a3;
+ font-size: 0.8125rem;
+ display: block;
+ margin-bottom: 4px;
+ }
+ 
+ .footer-col a:hover {
+ color: #e07a5f;
+ }
+ 
+ .footer-bottom {
+ border-top: 1px solid #3d3a36;
+ margin-top: 32px;
+ padding-top: 24px;
+ text-align: center;
+ font-size: 0.75rem;
+ color: #b0a9a3;
+ }
+ 
+ /* Responsive */
+ @media (max-width: 768px) {
+ .container {
+ padding: 0 16px;
+ }
+ 
+ .header-inner {
+ padding: 12px 16px;
+ }
+ 
+ nav {
+ display: none;
+ }
+ 
+ .hamburger {
+ display: flex;
+ }
+ 
+ .hero-grid {
+ grid-template-columns: 1fr;
+ gap: 32px;
+ }
+ 
+ .hero {
+ padding: 48px 0 40px;
+ }
+ 
+ .hero-visual {
+ height: 200px;
+ }
+ 
+ .hero-stats {
+ gap: 24px;
+ flex-wrap: wrap;
+ }
+ 
+ .features-grid {
+ grid-template-columns: 1fr;
+ }
+ 
+ .trends-grid {
+ grid-template-columns: 1fr;
+ }
+ 
+ .reviews-grid {
+ grid-template-columns: 1fr;
+ }
+ 
+ .footer-grid {
+ grid-template-columns: 1fr;
+ gap: 16px;
+ }
+ 
+ section {
+ padding: 40px 0;
+ }
+ 
+ .cta-card {
+ padding: 32px 24px;
+ }
+ 
+ .cta-section {
+ padding: 40px 0;
+ }
+ }
+ </style>
+ <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-inner">
-            <div class="logo">마포<span>셔츠룸</span></div>
-            <nav>
-                <a href="#services">서비스</a>
-                <a href="#trends">AI트렌드</a>
-                <a href="#reviews">리뷰</a>
-                <a href="#contact" class="nav-cta">예약문의</a>
-            </nav>
-            <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴 열기">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="#services">서비스</a>
-            <a href="#trends">AI트렌드</a>
-            <a href="#reviews">리뷰</a>
-            <a href="#contact" class="nav-cta">예약문의</a>
-        </div>
-    </header>
+ <!-- Header -->
+ <header>
+ <div class="header-inner">
+ <div class="logo">마포<span>셔츠룸</span></div>
+ <nav>
+ <a href="#services">서비스</a>
+ <a href="#trends">AI트렌드</a>
+ <a href="#reviews">리뷰</a>
+ <a href="#contact" class="nav-cta">예약문의</a>
+ </nav>
+ <button class="hamburger" onclick="toggleMenu()" aria-label="메뉴 열기">
+ 
+ 
+ 
+ </button>
+ </div>
+ <div class="mobile-menu" id="mobileMenu">
+ <a href="#services">서비스</a>
+ <a href="#trends">AI트렌드</a>
+ <a href="#reviews">리뷰</a>
+ <a href="#contact" class="nav-cta">예약문의</a>
+ </div>
+ </header>
 
 <main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <p class="text-accent fw-bold">마포 · AI 트렌드 안내</p>
-        <h1>공간을 고르는 기준도 <span class="text-accent">AI 트렌드</span>를 따라 달라지고 있습니다</h1>
-        <p class="text-muted">최근 프리미엄 공간을 운영하고 이용하는 방식은 예약, 응대, 정보 제공 전반에서 자동화 도구의 영향을 받고 있습니다. 이 페이지는 '마포 셔츠룸'을 검색해 방문한 분들을 위해 AI 트렌드라는 표현이 공간 서비스에서 구체적으로 어떤 의미를 갖는지 개념 위주로 정리했습니다.</p>
-        <div class="hero-cta">
-          <a class="cta-button" href="tel:010-6279-0862">전화 문의 010-6279-0862</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-visual-content">
-          <span class="emoji">🤖</span>
-          <p class="text-muted">AI 트렌드 개념 가이드</p>
-        </div>
-      </div>
-    </div>
-  </section>
+ <section class="hero">
+ <div class="container hero-grid">
+ <div class="hero-content">
+ <p class="text-accent fw-bold">마포 · AI 트렌드 안내</p>
+ <h1>공간을 고르는 기준도 <span class="text-accent">AI 트렌드</span>를 따라 달라지고 있습니다</h1>
+ <p class="text-muted">최근 프리미엄 공간을 운영하고 이용하는 방식은 예약, 응대, 정보 제공 전반에서 자동화 도구의 영향을 받고 있습니다. 이 페이지는 '마포 셔츠룸'을 검색해 방문한 분들을 위해 AI 트렌드라는 표현이 공간 서비스에서 구체적으로 어떤 의미를 갖는지 개념 위주로 정리했습니다.</p>
+ 
+ </div>
+ <div class="hero-visual">
+ <div class="hero-visual-content">
+ <span class="emoji">🤖</span>
+ <p class="text-muted">AI 트렌드 개념 가이드</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <section class="section-header container">
-    <h2>AI 트렌드란 무엇을 가리키는가</h2>
-    <p class="text-muted">'AI 트렌드'는 하나의 기술을 뜻하는 말이 아닙니다. 예약 관리, 고객 응대, 운영 데이터 정리처럼 서로 다른 영역에서 자동화·학습 기반 도구가 함께 확산되는 흐름 전체를 가리키는 표현에 가깝습니다. 공간 서비스 업계에서도 이 흐름은 예외가 아니며, 이용자 입장에서는 무엇이 실제로 바뀌고 무엇이 그대로인지 구분해서 볼 필요가 있습니다.</p>
-  </section>
+ <section class="section-header container">
+ <h2>AI 트렌드란 무엇을 가리키는가</h2>
+ <p class="text-muted">'AI 트렌드'는 하나의 기술을 뜻하는 말이 아닙니다. 예약 관리, 고객 응대, 운영 데이터 정리처럼 서로 다른 영역에서 자동화·학습 기반 도구가 함께 확산되는 흐름 전체를 가리키는 표현에 가깝습니다. 공간 서비스 업계에서도 이 흐름은 예외가 아니며, 이용자 입장에서는 무엇이 실제로 바뀌고 무엇이 그대로인지 구분해서 볼 필요가 있습니다.</p>
+ </section>
 
-  <section class="features-grid container">
-    <div class="feature-card border-bottom">
-      <h3 class="fw-bold">예약·응대 자동화</h3>
-      <p class="text-muted">문의 접수와 예약 확인 과정에 자동 응답 도구를 붙이는 방식으로, 대기 시간을 줄이는 데 주로 활용됩니다.</p>
-    </div>
-    <div class="feature-card border-bottom">
-      <h3 class="fw-bold">운영 데이터 정리</h3>
-      <p class="text-muted">방문 시간대, 문의 유형 등을 기록해 운영 계획을 세우는 데 참고 자료로 삼는 방식입니다.</p>
-    </div>
-    <div class="feature-card border-bottom">
-      <h3 class="fw-bold">정보 제공 방식 개선</h3>
-      <p class="text-muted">안내 자료를 이용자 질문에 맞춰 더 빠르게 갱신하는 데 쓰이는 경우가 많습니다.</p>
-    </div>
-    <div class="feature-card border-bottom">
-      <h3 class="fw-bold">개인정보 처리 원칙</h3>
-      <p class="text-muted">자동화 도구를 쓰더라도 문의자의 개인정보를 목적 외로 저장하거나 공유하지 않는 것이 기본 원칙입니다.</p>
-    </div>
-  </section>
+ <section class="features-grid container">
+ <div class="feature-card border-bottom">
+ <h3 class="fw-bold">예약·응대 자동화</h3>
+ <p class="text-muted">문의 접수와 예약 확인 과정에 자동 응답 도구를 붙이는 방식으로, 대기 시간을 줄이는 데 주로 활용됩니다.</p>
+ </div>
+ <div class="feature-card border-bottom">
+ <h3 class="fw-bold">운영 데이터 정리</h3>
+ <p class="text-muted">방문 시간대, 문의 유형 등을 기록해 운영 계획을 세우는 데 참고 자료로 삼는 방식입니다.</p>
+ </div>
+ <div class="feature-card border-bottom">
+ <h3 class="fw-bold">정보 제공 방식 개선</h3>
+ <p class="text-muted">안내 자료를 이용자 질문에 맞춰 더 빠르게 갱신하는 데 쓰이는 경우가 많습니다.</p>
+ </div>
+ <div class="feature-card border-bottom">
+ <h3 class="fw-bold">개인정보 처리 원칙</h3>
+ <p class="text-muted">자동화 도구를 쓰더라도 문의자의 개인정보를 목적 외로 저장하거나 공유하지 않는 것이 기본 원칙입니다.</p>
+ </div>
+ </section>
 
-  <section class="trends-grid container border-top">
-    <div class="trend-item">
-      <div class="trend-index">01</div>
-      <div class="trend-content">
-        <h4>자동 응대 도구</h4>
-        <p class="text-muted">문의가 몰리는 시간대에도 기본 안내가 끊기지 않도록 돕는 보조 수단입니다. 상담을 완전히 대체하기보다 앞단계를 정리하는 역할에 가깝습니다.</p>
-      </div>
-    </div>
-    <div class="trend-item">
-      <div class="trend-index">02</div>
-      <div class="trend-content">
-        <h4>데이터 기반 운영 점검</h4>
-        <p class="text-muted">방문 패턴이나 문의 빈도를 주기적으로 살펴보고 운영 시간이나 인력 배치를 조정하는 참고 자료로 삼는 흐름입니다.</p>
-      </div>
-    </div>
-    <div class="trend-item active">
-      <div class="trend-index">03</div>
-      <div class="trend-content">
-        <h4>정보 갱신 주기 단축</h4>
-        <p class="text-muted">공지사항이나 안내 문구를 손으로 일일이 고치는 대신, 정해진 규칙에 따라 빠르게 반영하는 방식이 늘고 있습니다.</p>
-      </div>
-    </div>
-    <div class="trend-item">
-      <div class="trend-index">04</div>
-      <div class="trend-content">
-        <h4>보안·개인정보 강화</h4>
-        <p class="text-muted">자동화 범위가 넓어질수록 접근 권한과 기록 보관 정책을 함께 점검해야 한다는 지적도 늘고 있습니다.</p>
-      </div>
-    </div>
-  </section>
+ <section class="trends-grid container border-top">
+ <div class="trend-item">
+ <div class="trend-index">01</div>
+ <div class="trend-content">
+ <h4>자동 응대 도구</h4>
+ <p class="text-muted">문의가 몰리는 시간대에도 기본 안내가 끊기지 않도록 돕는 보조 수단입니다. 상담을 완전히 대체하기보다 앞단계를 정리하는 역할에 가깝습니다.</p>
+ </div>
+ </div>
+ <div class="trend-item">
+ <div class="trend-index">02</div>
+ <div class="trend-content">
+ <h4>데이터 기반 운영 점검</h4>
+ <p class="text-muted">방문 패턴이나 문의 빈도를 주기적으로 살펴보고 운영 시간이나 인력 배치를 조정하는 참고 자료로 삼는 흐름입니다.</p>
+ </div>
+ </div>
+ <div class="trend-item active">
+ <div class="trend-index">03</div>
+ <div class="trend-content">
+ <h4>정보 갱신 주기 단축</h4>
+ <p class="text-muted">공지사항이나 안내 문구를 손으로 일일이 고치는 대신, 정해진 규칙에 따라 빠르게 반영하는 방식이 늘고 있습니다.</p>
+ </div>
+ </div>
+ <div class="trend-item">
+ <div class="trend-index">04</div>
+ <div class="trend-content">
+ <h4>보안·개인정보 강화</h4>
+ <p class="text-muted">자동화 범위가 넓어질수록 접근 권한과 기록 보관 정책을 함께 점검해야 한다는 지적도 늘고 있습니다.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="cta-section border-top">
-    <div class="cta-card container">
-      <h2>문의 및 확인</h2>
-      <p class="text-muted">공간 이용과 관련한 구체적인 사항, 위치·이용 절차·요금 안내는 페이지 설명만으로 단정하지 마시고 아래 연락처를 통해 직접 확인하시기 바랍니다.</p>
-      <a class="cta-button" href="tel:010-6279-0862">전화 상담</a>
-      <p class="cta-phone">010-6279-0862</p>
-    </div>
-  </section>
+ <section class="cta-section border-top">
+ <div class="cta-card container">
+ <h2>문의 및 확인</h2>
+ <p class="text-muted">공간 이용과 관련한 구체적인 사항, 위치·이용 절차·요금 안내는 페이지 설명만으로 단정하지 마시고 아래 연락처를 통해 직접 확인하시기 바랍니다.</p>
+ 
+ 
+ </div>
+ </section>
 </main>
 
 
